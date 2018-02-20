@@ -26,3 +26,15 @@ Now upload an image and you'll see the event come through in the listener
 ```
 ./scripts/04-upload-image.sh
 ```
+
+You should see something like the following in your terminal that's running the Thumbor server
+```
+2018-02-20 15:59:26 thumbor:DEBUG trigger asynchronous <asyncblink.NamedAsyncSignal object at 0x7eff52c26400; 'imaging.after_upload_image'>
+async call due to after_upload event
+Published event to Redis: {"method": "POST", "location": "/image/3aafefc9a2e84099bbfdeb8efde296dc/logo-thumbor.png"}
+```
+...and something like the following the listener terminal
+```
+Listening on channel thumbor_uploads
+received "{'method': 'POST', 'location': '/image/3aafefc9a2e84099bbfdeb8efde296dc/logo-thumbor.png'}"
+```
