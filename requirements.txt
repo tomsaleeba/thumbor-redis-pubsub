@@ -1,2 +1,2 @@
 redis
-git+https://github.com/tomsaleeba/thumbor.git#tomsaleeba-refactor
+https://github.com/tomsaleeba/thumbor/archive/tomsaleeba-refactor.zip
